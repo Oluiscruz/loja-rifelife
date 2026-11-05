@@ -1,0 +1,122 @@
+.category-grid {
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px
+}
+
+.category-card {
+    background: transparent;
+    color: #1d2819;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+    padding: 20px;
+    position: relative;
+    text-decoration: none;
+}
+
+.category-art {
+    align-items: center;
+    display: flex;
+    height: 124px;
+    justify-content: center;
+    margin-bottom: 8px;
+}
+
+ .infos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+        margin-top: 12px;
+    }
+
+.circle {
+    padding: 8px;
+    align-items: center;
+    background: #f0f4f6;
+    border-radius: 50%;
+    border: 1px solid #77d505;
+    box-shadow: 4px 12px 35px #a3a2a259;
+
+    display: flex;
+    height: 135px;
+    width: 135px;
+    justify-content: center;
+    transition: all .2s ease-in-out;
+
+    &:hover {
+        box-shadow: 0 0px 1800px #67ff21;
+        transform: translateY(-5px);
+    }
+
+}
+
+.category-art img {
+    height: 90px;
+    mix-blend-mode: multiply;
+    object-fit: contain;
+    width: 90px
+}
+
+.category-art span {
+    align-items: center;
+    background: #d8edbb;
+    border-radius: 50%;
+    color: var(--color-2);
+    display: flex;
+    font-size: 2.4rem;
+    font-weight: 800;
+    height: 86px;
+    justify-content: center;
+    width: 86px
+}
+
+.art-1 span {
+    background: #eff0cb
+}
+
+.art-2 span {
+    background: #d5eae0
+}
+
+.art-3 span {
+    background: #f4dfba
+}
+
+.category-card h3 {
+    font-size: 1rem;
+    letter-spacing: -.02em;
+    margin: 0 0 4px;
+}
+
+.category-card p {
+    color: #73806e;
+    font-size: .66rem
+}
+
+
+
+@media(max-width:760px) {
+    .category-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px
+    }
+
+    .category-card {
+        min-height: 190px;
+        padding: 15px
+    }
+
+    .category-art {
+        height: 100px
+    }
+
+    .category-art img {
+        height: 112px;
+        width: 112px
+    }
+}

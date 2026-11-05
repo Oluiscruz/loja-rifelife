@@ -1,0 +1,135 @@
+.search-panel {
+    background: #fff;
+    box-shadow: 0 16px 35px rgba(0, 0, 0, .2);
+    color: #283025;
+    left: 0;
+    padding: 18px clamp(20px, 5vw, 84px) 22px;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 10;
+}
+
+.search-form {
+    display: flex;
+    gap: 9px;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.search-form input {
+    border: 1px solid #c8d0c2;
+    border-radius: 3px;
+    flex: 1;
+    font: inherit;
+    min-width: 0;
+    padding: 12px 14px;
+}
+
+.search-form input:focus {
+    border-color: #789c30;
+    outline: 2px solid rgba(167, 227, 37, .45);
+    outline-offset: 1px;
+}
+
+.search-form button {
+    background: var(--color-1);
+    border: 0;
+    color: #1f2b17;
+    cursor: pointer;
+    font-weight: 900;
+    padding: 0 18px;
+}
+
+.search-form button:disabled {
+    cursor: wait;
+    opacity: .65;
+}
+
+.search-form .search-close {
+    background: transparent;
+    color: #485044;
+    font-size: 1.7rem;
+    font-weight: 400;
+    padding: 0 8px;
+}
+
+.search-message {
+    font-size: .82rem;
+    margin: 16px auto 0;
+    max-width: 760px;
+}
+
+.search-results {
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.search-results ul {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+.search-results li button {
+    background: #f4f7f1;
+    border: 1px solid #e1e8dc;
+    color: inherit;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 11px;
+    text-align: left;
+    width: 100%;
+}
+
+.search-results li button:hover,
+.search-results li button:focus-visible {
+    border-color: #9bcf29;
+    outline: none;
+}
+
+.search-results span,
+.search-results small {
+    color: #6a7563;
+    font-size: .62rem;
+}
+
+.search-results strong {
+    font-size: .78rem;
+}
+
+.sr-only {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    position: absolute;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 600px) {
+    .search-panel {
+        padding: 14px 20px 18px;
+    }
+
+    .search-form {
+        flex-wrap: wrap;
+    }
+
+    .search-form input {
+        flex-basis: calc(100% - 48px);
+    }
+
+    .search-form button {
+        min-height: 42px;
+    }
+
+    .search-results ul {
+        grid-template-columns: 1fr;
+    }
+}
